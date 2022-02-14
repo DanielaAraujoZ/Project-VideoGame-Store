@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root{
+    --red-bg : #3D0000;
+    --black-target : #030303;
+    --red-button: #CC0808;
+    --white: #FFFFFF;
+}
+
+body{
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.navbar{
+    color: var(--white);
+    font-weight: 400;
+}
+.left{
+    gap: 16px;
+}
+#iconShop{
+    width: 50px;
+    margin: 8px;
+}
+.right{
+    gap: 16px;
+}
+#searchButton{
+    width: 50px;
+}
+.mainContent{
+    width: 100%;
+    gap: 24px;
+    background-color: var(--red-bg);
+}

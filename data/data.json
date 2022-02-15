@@ -1,0 +1,18 @@
+{
+  "infoUsers": [
+    {
+      "name": "Daniela",
+      "lastName": "Araujo",
+      "email": "daniela@gmail.com",
+      "password": "hgjkdhak",
+      "id": 1
+    },
+    {
+      "name": "dad",
+      "lastName": "a",
+      "email": "sad@gmail.com",
+      "password": "dad",
+      "id": 2
+    }
+  ]
+}

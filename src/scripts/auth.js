@@ -10,7 +10,7 @@ formS.addEventListener("submit", (e) => {
   const email = document.getElementById("emailS").value;
   const password = document.getElementById("passwordS").value;
 
-  //Se envían datos al json-server. Pendiente pasar a Heroku.
+  //Se envían datos a Heroku.
   fetch(urlData, {
     method: "POST",
     body: JSON.stringify({
@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//Obtiene los datos del json-server.
+//Obtiene los datos del servidor.
 async function getData() {
   try {
     const respond = await fetch(urlData);
@@ -84,7 +84,7 @@ buttonL.addEventListener("click", async () => {
   } else {
     Swal.fire({
       title:
-      "Validación incorrecta. Verifica tus datos o registrate en la ventana de SIGNUP",
+        "Validación incorrecta. Verifica tus datos o registrate en la ventana de SIGNUP",
       width: 600,
       padding: "3em",
       color: "#FFF",

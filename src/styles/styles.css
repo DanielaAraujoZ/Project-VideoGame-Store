@@ -14,6 +14,7 @@ body {
 .navbar {
   color: var(--white);
   font-weight: 400;
+  background-color: var(--black-target);
 }
 .left {
   gap: 16px;

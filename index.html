@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./src/styles/styles.css" type="text/css" />
     <title>Videogame Store</title>
   </head>
+
   <body>
     <nav
       class="navbar navbar-dark bg-dark px-5 d-flex flex-row justify-content-between"
@@ -20,18 +21,33 @@
       <div
         class="left d-flex flex-row justify-content-start align-items-center"
       >
-        <img src="./images/shopcar.png" alt="shopCar" id="iconShop" />
+        <button>
+          <abbr title="My articles favorites">
+            <i class="fa-solid fa-star"></i
+          ></abbr>
+        </button>
         <p>Category</p>
         <p>Plataform</p>
       </div>
       <div class="right d-flex flex-row justify-content-end align-items-center">
-        <a href="./src/pages/auth.html"> <p>SIGN UP / LOGIN</p> </a>
-        <input type="text" placeholder="Write the product" />
-        <button>
-          <img src="./images/searchButton.png" id="searchButton" />
-        </button>
+        <div class="d-flex align-items-center"></div>
+        <div class="d-flex">
+          <input type="text" placeholder="Write the product" />
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button id="notuser">
+            <a href="./auth.html" id="auth">
+              <i class="fa-solid fa-user-large-slash" style="color: black"></i>
+            </a>
+          </button>
+          <button id="outUser" disabled>
+            <i class="fa-solid fa-user-xmark"></i>
+          </button>
+        </div>
       </div>
     </nav>
+
     <main
       id="MainContent"
       class="mainContent d-flex flex-wrap justify-content-center"
@@ -39,11 +55,16 @@
       <!-- Main Content here. Cards from API -->
     </main>
     <footer>
-      <nav class="navbar navbar-dark bg-dark">
-        <p>Contact Us</p>
-        <p>
-          More Info <a href="https://rawg.io/apidocs" target="_blank">(API)</a>
-        </p>
+      <nav
+        class="footer navbar navbar-dark bg-dark d-flex justify-content-between align-items-center"
+      >
+        <div class="d-flex align-items-center infoExternal">
+          <p>Contact Us</p>
+          <p>
+            More Info
+            <a href="https://rawg.io/apidocs" target="_blank">(API)</a>
+          </p>
+        </div>
       </nav>
     </footer>
   </body>
@@ -54,4 +75,9 @@
     crossorigin="anonymous"
   ></script>
   <script src="./src/scripts/index.js"></script>
+  <script
+    src="https://kit.fontawesome.com/8c0752dc6f.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

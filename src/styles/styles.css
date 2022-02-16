@@ -1,44 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
-:root{
-    --red-bg : #3D0000;
-    --black-target : #030303;
-    --red-button: #CC0808;
-    --white: #FFFFFF;
+:root {
+  --red-bg: #3d0000;
+  --black-target: #030303;
+  --red-button: #cc0808;
+  --white: #ffffff;
 }
 
-body{
-    margin: 0;
-    font-family: 'Varela Round', sans-serif;
+body {
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
 }
-.navbar{
-    color: var(--white);
-    font-weight: 400;
+.navbar {
+  color: var(--white);
+  font-weight: 400;
 }
-.left{
-    gap: 16px;
+.left {
+  gap: 16px;
 }
-.left > p{
-    margin: 0
+.left > p {
+  margin: 0;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-a> p{
-    margin: 0;
+a > p {
+  margin: 0;
 }
-#iconShop{
-    width: 50px;
-    margin: 8px;
+#iconShop {
+  width: 50px;
+  margin: 8px;
 }
-.right{
-    gap: 16px;
+.right {
+  gap: 16px;
 }
-#searchButton{
-    width: 50px;
+#searchButton {
+  width: 50px;
 }
-.mainContent{
-    width: 100%;
-    gap: 24px;
-    background-color: var(--red-bg);
+.mainContent {
+  width: 100%;
+  gap: 24px;
+  background-color: var(--red-bg);
+}
+.footer {
+  gap: 50px;
+  font-size: 18px;
+  width: 100%;
+}
+#notuser {
+  margin-left: 40px;
+  margin-right: 12px;
+}
+.infoExternal {
+  gap: 42px;
+  margin-right: 24px;
+}
+.infoExternal > p {
+  margin: 0px;
 }

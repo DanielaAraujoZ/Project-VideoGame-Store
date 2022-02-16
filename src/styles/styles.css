@@ -24,15 +24,11 @@ body {
 a {
   text-decoration: none;
 }
-a > p {
-  margin: 0;
-}
-#iconShop {
-  width: 50px;
-  margin: 8px;
-}
 .right {
   gap: 16px;
+}
+input{
+  width: 50%;
 }
 #searchButton {
   width: 50px;
@@ -57,4 +53,7 @@ a > p {
 }
 .infoExternal > p {
   margin: 0px;
+}
+.offcanvas{
+  color: var(--white);
 }

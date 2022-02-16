@@ -2,7 +2,7 @@ const urlAPI =
   "https://api.rawg.io/api/platforms?key=364e9ff77e354af38f029eac24949a2b";
 const divTarget = document.getElementById("MainContent");
 
-//Función que obtiene los datos del json-server.
+//Función que obtiene los datos del API externa.
 async function getData() {
   try {
     const respond = await fetch(urlAPI);

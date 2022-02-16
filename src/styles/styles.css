@@ -15,8 +15,7 @@ body {
   background: var(--black-target);
   color: var(--white);
   font-weight: 400;
-  background-color: var(--black-target);
-  font-weight: 400; 
+  font-weight: 400;
 }
 .left {
   gap: 16px;
@@ -24,14 +23,14 @@ body {
 .left > p {
   margin: 0;
 }
-a {  
+a {
   color: #fff;
   text-decoration: none;
 }
 .right {
   gap: 16px;
 }
-input{
+input {
   width: 50%;
 }
 #searchButton {
@@ -46,6 +45,7 @@ input{
   gap: 50px;
   font-size: 18px;
   width: 100%;
+  background-color: var(--black-target);
 }
 #notuser {
   margin-left: 40px;
@@ -58,32 +58,54 @@ input{
 .infoExternal > p {
   margin: 0px;
 }
-.offcanvas{
+.offcanvas {
   color: var(--white);
+  background-color: var(--red-bg);
 }
-.nav-link{
-  color: #fff; 
+.nav-link {
+  color: #fff;
   font-size: 19px;
 }
-.nav-link:hover{
-  color: var(--red-button); 
+.nav-link:hover {
+  color: var(--red-button);
 }
-ul{  
+ul {
   display: flex;
   flex-direction: row;
   margin-top: 18px;
   align-content: center;
   list-style: none;
 }
-.card{
+.card {
   background-color: #030303;
   color: #ffff;
-  margin: 13px 0 20px 0;  
+  margin: 13px 0 20px 0;
 }
-.card-img-top{
+.card-img-top {
   height: 36%;
 }
-.card .btn{
-  background-color:var(--red-button);
+.card .btn {
+  background-color: var(--red-button);
   border: 3px solid var(--red-bg);
+}
+.mainTitle {
+  font-size: 48px;
+  font-weight: 900;
+}
+.mainTitle > a {
+  color: var(--white);
+  text-shadow: -2px -2px 0px var(--red-bg), 4px 4px 0px var(--red-button),
+    4px 4px 0px var(--black-target);
+}
+.card-favorite{
+  background-color: var(--black-target);
+  padding: 12px;
+  border-radius: 8px;
+  width: 80%;
+  margin: 4px auto;
+  font-size: 12px;
+}
+.img-favorite{
+  width: 72px;
+  margin: 8px;
 }

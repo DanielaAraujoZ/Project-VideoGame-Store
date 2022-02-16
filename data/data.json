@@ -6,27 +6,6 @@
       "email": "daniela@gmail.com",
       "password": "hgjkdhak",
       "id": 1
-    },
-    {
-      "name": "dad",
-      "lastName": "a",
-      "email": "sad@gmail.com",
-      "password": "dad",
-      "id": 2
-    },
-    {
-      "name": "Daniela",
-      "lastName": "Araujo",
-      "email": "daniela.araujoz08@hotmail.com",
-      "password": "123456",
-      "id": 3
-    },
-    {
-      "name": "da",
-      "lastName": "da",
-      "email": "daniela.araujoz08@gmail.com",
-      "password": "15050",
-      "id": 4
     }
   ]
 }

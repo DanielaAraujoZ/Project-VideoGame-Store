@@ -18,7 +18,7 @@ async function showInfo(data) {
   data = await getData();
   let info = data.results;
   info.map((item) => {
-    const { name, image_background, games_count, games } = item;
+    const { name, image_background, games_count, games, id } = item;
 
     divTarget.innerHTML += `
              <div class="card" style="width: 18rem;">
@@ -26,7 +26,7 @@ async function showInfo(data) {
                  <div class="card-body">
                    <h5 class="card-title">${name}</h5>
                    <p class="card-text">${games.map((item) => item.name)}</p>
-                   <button class="btn btn-primary">Add Car</button>
+                   <button class="btn btn-primary" onclick="addFavorite(${id})">Add Car</button>
                  </div>
              </div>
                `;
@@ -45,12 +45,21 @@ if (dataLocalS.email !== undefined) {
     <a href="./auth.html">
     <i class="fa-solid fa-user-check" style="color: black"></i>
     </a>`;
-  outUser.disabled = false
-  buttonIcon.disabled = true
+  outUser.disabled = false;
+  buttonIcon.disabled = true;
 }
 
-//Se reinicia el localStorage y se recarga la página en caso que se le de click al boton LogOut. 
+//Se reinicia el localStorage y se recarga la página en caso que se le de click al boton LogOut.
 outUser.addEventListener("click", () => {
   localStorage.clear();
-  location.reload()
+  location.reload();
 });
+
+//Agrega los elementos seleccionados como favoritos al offcanvas.
+async function addFavorite(id) {
+  let data = await getData();
+  let elementToSend = data.results.filter((item) => item.id === id)
+  const { name, games_count, image_background } = elementToSend
+  
+  console.log(elementToSend);
+}

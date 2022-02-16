@@ -1,139 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./src/styles/styles.css" type="text/css" />
-    <title>Videogame Store</title>
-  </head>
 
-  <body>
-    <nav class="navbar px-5 d-flex flex-row justify-content-between">
-      <div class="left d-flex flex-row justify-content-start align-items-center">
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFavorite" aria-controls="offcanvasFavoriteLabel">
-          <i class="fa-solid fa-star"></i>
-    <nav
-      class="navbar navbar-dark px-5 d-flex flex-row justify-content-between"
-    >
-      <div
-        class="left d-flex flex-row justify-content-start align-items-center"
-      >
-        <button>
-          <abbr title="My articles favorites">
-            <i class="fa-solid fa-star"></i
-          ></abbr>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./src/styles/styles.css" type="text/css" />
+  <title>Videogame Store</title>
+</head>
+
+<body>
+  <!-- Navbar and elements -->
+  <nav class="navbar px-5 py-0 d-flex flex-row justify-content-between">
+    <div class="left d-flex flex-row justify-content-start align-items-center">
+      <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFavorite"
+        aria-controls="offcanvasFavoriteLabel">
+        <i class="fa-solid fa-star" style="color: #FFFFFF"></i>
+      </button>
+      <ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Plataform
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">PC</a></li>
+            <li><a class="dropdown-item" href="#">PS</a></li>
+            <li><a class="dropdown-item" href="#">Xbox</a></li>
+            <li><a class="dropdown-item" href="#">Switch</a></li>
+            <li><a class="dropdown-item" href="#">IOS</a></li>
+            <li><a class="dropdown-item" href="#">Android</a></li>
+            <li><a class="dropdown-item" href="#">Nintendo</a></li>
+            <li><a class="dropdown-item" href="#">macOS</a></li>
+            <li><a class="dropdown-item" href="#">Linux</a></li>
+            <li><a class="dropdown-item" href="#">Classic Macintosh</a></li>
+            <li><a class="dropdown-item" href="#">Apple II</a></li>
+            <li><a class="dropdown-item" href="#">Commodore/Amiga</a></li>
+            <li><a class="dropdown-item" href="#">Atari</a></li>
+            <li><a class="dropdown-item" href="#">Sega</a></li>
+            <li><a class="dropdown-item" href="#">3DO</a></li>
+            <li><a class="dropdown-item" href="#">Neo Geo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center">
+      <h1 class="mainTitle m-0"> <a href="./index.html"> YFVG </a> </h1>
+    </div>
+    <div class="right d-flex flex-row justify-content-end align-items-center">
+      <div class="d-flex align-items-center"></div>
+      <div class="d-flex">
+        <input type="text" placeholder="Write the product" />
+        <button id="searchButton">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <ul>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Category
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Adventure</a></li>
-              <li><a class="dropdown-item" href="#">Online</a></li>
-              <li><a class="dropdown-item" href="#">Offline</a></li>
-              <li><a class="dropdown-item" href="#">Races</a></li>
-              <li><a class="dropdown-item" href="#">Shooter</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Plataform
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">PC</a></li>
-              <li><a class="dropdown-item" href="#">PS</a></li>
-              <li><a class="dropdown-item" href="#">Xbox</a></li>
-              <li><a class="dropdown-item" href="#">Switch</a></li>
-              <li><a class="dropdown-item" href="#">IOS</a></li>
-              <li><a class="dropdown-item" href="#">Android</a></li>
-              <li><a class="dropdown-item" href="#">Nintendo</a></li>
-              <li><a class="dropdown-item" href="#">macOS</a></li>
-              <li><a class="dropdown-item" href="#">Linux</a></li>
-              <li><a class="dropdown-item" href="#">Classic Macintosh</a></li>
-              <li><a class="dropdown-item" href="#">Apple II</a></li>
-              <li><a class="dropdown-item" href="#">Commodore/Amiga</a></li>
-              <li><a class="dropdown-item" href="#">Atari</a></li>
-              <li><a class="dropdown-item" href="#">Sega</a></li>
-              <li><a class="dropdown-item" href="#">3DO</a></li>
-              <li><a class="dropdown-item" href="#">Neo Geo</a></li>              
-            </ul>
-          </li>
-        </ul>        
+        <button id="notuser">
+          <a href="./auth.html" id="auth">
+            <i class="fa-solid fa-user-large-slash" style="color: black"></i>
+          </a>
+        </button>
+        <button id="outUser" disabled>
+          <i class="fa-solid fa-user-xmark"></i>
+        </button>
       </div>
-      <div class="right d-flex flex-row justify-content-end align-items-center">
-        <div class="d-flex align-items-center"></div>
-        <div class="d-flex">
-          <input type="text" placeholder="Write the product" />
-          <button id="searchButton">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-          <button id="notuser">
-            <a href="./auth.html" id="auth">
-              <i class="fa-solid fa-user-large-slash" style="color: black"></i>
-            </a>
-          </button>
-          <button id="outUser" disabled>
-            <i class="fa-solid fa-user-xmark"></i>
-          </button>
-        </div>
+    </div>
+  </nav>
+  <main id="MainContent" class="mainContent d-flex flex-wrap justify-content-center">
+    <!-- Main Content here. Cards from API -->
+  </main>
+  <!--Footer-->
+  <footer>
+    <nav class="footer navbar d-flex justify-content-center align-items-center">
+      <div class="d-flex align-items-center infoExternal">
+        <p>Contact Us</p>
+        <p>More Info <a href="https://rawg.io/apidocs" target="_blank">(API)</a>
+        </p>
       </div>
     </nav>
-
-    <main
-      id="MainContent"
-      class="mainContent d-flex flex-wrap justify-content-center"
-    >
-      <!-- Main Content here. Cards from API -->
-    </main>
-    <footer>
-      <nav class="footer navbar navbar-dark bg-dark d-flex justify-content-center align-items-center">
-        <div class="d-flex align-items-center infoExternal">
-<<<<<<< HEAD
-          <p>Contact Us</p>
-          <p>More Info <a href="https://rawg.io/apidocs" target="_blank">(API)</a>
-=======
-          <a href="#"><p>Contact Us</p></a>
-          <p>
-            More Info
-            <a href="https://rawg.io/apidocs" target="_blank">(API)</a>
->>>>>>> 1d6bd7be4795facc6fc217887585ec5e8d94bb29
-          </p>
-        </div>
-      </nav>
-    </footer>
-    <!-- Offcanvas Favorites Items -->
-    <div class="offcanvas offcanvas-start bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasFavorite" aria-labelledby="offcanvasFavoriteLabel">
-      <div class="offcanvas-header">
-        <h3 class="offcanvas-title" id="offcanvasFavoriteLabel">My Favorites</h3>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body d-flex flex-column justify-content-start">
-        <!-- Tarjetas de favoritos -->
-        <div class="card-favorite d-flex flex-row">  
-          <img src="..." alt="">
+  </footer>
+  <!-- Offcanvas Favorites Items -->
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasFavorite"
+    aria-labelledby="offcanvasFavoriteLabel">
+    <div class="offcanvas-header">
+      <h3 class="offcanvas-title mt-3" id="offcanvasFavoriteLabel">My Favorites</h3>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-start">
+      <!-- Cards marked as favorites -->
+      <div class="card-favorite d-flex flex-row align-items-center justify-content-center">
+        <img class="img-favorite" src="https://w7.pngwing.com/pngs/67/631/png-transparent-pink-hibiscus-flowers-flower-small-fresh-summer-flowers-herbaceous-plant-summer-malvales-thumbnail.png" alt="">
+        <div class="d-flex flex-column ">
+          <p class="m-1"> Name: XBOX One </p>
+          <p class="m-1"> Counts-game: 2005 </p>
         </div>
       </div>
     </div>
+  </div>
 
-  </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
-  <script src="./src/scripts/index.js"></script>
-  <script
-    src="https://kit.fontawesome.com/8c0752dc6f.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="./src/scripts/index.js"></script>
+<script src="https://kit.fontawesome.com/8c0752dc6f.js" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>

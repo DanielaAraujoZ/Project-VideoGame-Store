@@ -12,19 +12,32 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-dark px-5 d-flex flex-row justify-content-between">
+  <nav class="navbar px-5 py-2 d-flex flex-row justify-content-between align-items-center">
     <div class="left d-flex flex-row justify-content-start align-items-center">
-      <p>Category</p>
-      <p>Plataform</p>
+      <p class="nav-item dropdown ">
+        <button class="btn p-0" type="button" disabled>
+          <i class="fa-solid fa-star" style="color: #FFFFFF"></i>
+        </button>
+      </p>
+    </div>
+    <div class="d-flex align-items-center">
+      <h1 class="mainTitle m-0 ms-5 ps-5"> <a href="./index.html"> YFVG </a> </h1>
     </div>
     <div class="right d-flex flex-row justify-content-end align-items-center">
-      <input type="text" placeholder="Write the product" />
-      <button id="searchButton">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
+      <div class="d-flex align-items-center"></div>
+      <div class="d-flex">
+        <input type="text" placeholder="Write the product" disabled />
+        <button id="searchButton" disabled>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button id="notuser" disabled>
+          <i class="fa-solid fa-user-large-slash"></i>
+        </button>
+      </div>
     </div>
   </nav>
-  <main class="d-flex flex-row justify-content-evenly">
+
+  <main class="d-flex flex-wrap justify-content-evenly ">
     <div class="signUp d-flex align-items-center justify-content-center flex-column">
       <h1 class="fw-bold text-center mb-4">SIGN UP</h1>
       <form class="d-flex flex-column" id="formSignUp">
@@ -67,10 +80,7 @@
     </div>
   </main>
   <footer>
-    <nav class="footer navbar navbar-dark bg-dark d-flex justify-content-between align-items-center">
-      <button id="notuser" disabled>
-        <i class="fa-solid fa-user-large-slash"></i>
-      </button>
+    <nav class="footer navbar navbar-dark bg-dark d-flex justify-content-center align-items-center">
       <div class="d-flex align-items-center infoExternal">
         <p>Contact Us</p>
         <p>
@@ -84,4 +94,5 @@
 <script src="./src/scripts/auth.js"></script>
 <script src="https://kit.fontawesome.com/8c0752dc6f.js" crossorigin="anonymous"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>

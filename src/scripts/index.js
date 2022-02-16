@@ -21,7 +21,7 @@ async function showInfo(data) {
     const { name, image_background, games_count, games } = item;
 
     divTarget.innerHTML += `
-             <div class="card mt-5" style="width: 18rem;">
+             <div class="card" style="width: 18rem;">
                  <img src="${image_background}" class="card-img-top" alt="...">
                  <div class="card-body">
                    <h5 class="card-title">${name}</h5>

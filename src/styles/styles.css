@@ -12,8 +12,9 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 .navbar {
+  background: var(--black-target);
   color: var(--white);
-  font-weight: 400;
+  font-weight: 400; 
 }
 .left {
   gap: 16px;
@@ -21,7 +22,8 @@ body {
 .left > p {
   margin: 0;
 }
-a {
+a {  
+  color: #fff;
   text-decoration: none;
 }
 a > p {
@@ -57,4 +59,30 @@ a > p {
 }
 .infoExternal > p {
   margin: 0px;
+}
+.nav-link{
+  color: #fff; 
+  font-size: 19px;
+}
+.nav-link:hover{
+  color: var(--red-button); 
+}
+ul{  
+  display: flex;
+  flex-direction: row;
+  margin-top: 18px;
+  align-content: center;
+  list-style: none;
+}
+.card{
+  background-color: #030303;
+  color: #ffff;
+  margin: 13px 0 20px 0;  
+}
+.card-img-top{
+  height: 36%;
+}
+.card .btn{
+  background-color:var(--red-button);
+  border: 3px solid var(--red-bg);
 }

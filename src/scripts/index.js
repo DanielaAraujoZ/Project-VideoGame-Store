@@ -57,9 +57,19 @@ outUser.addEventListener("click", () => {
 
 //Agrega los elementos seleccionados como favoritos al offcanvas.
 async function addFavorite(id) {
+  const divOffcanvas = document.getElementById("off-canvas");
   let data = await getData();
-  let elementToSend = data.results.filter((item) => item.id === id)
-  const { name, games_count, image_background } = elementToSend
-  
-  console.log(elementToSend);
+  let elementToSend = data.results.filter((item) => item.id === id);
+  const { name, games_count, image_background } = elementToSend[0];
+
+  divOffcanvas.innerHTML += `
+  <div class="card-favorite d-flex flex-row align-items-center justify-content-center">
+    <img class="img-favorite" src="${image_background}" alt="${name}">
+      <div class="d-flex flex-column ">
+          <p class="m-1"> Name: ${name} </p>
+          <p class="m-1"> Games-count: ${games_count} </p>
+      </div>
+  </div>
+  `;
 }
+

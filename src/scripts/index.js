@@ -26,7 +26,7 @@ async function showInfo(data) {
                  <div class="card-body">
                    <h5 class="card-title">${name}</h5>
                    <p class="card-text">${games.map((item) => item.name)}</p>
-                   <button class="btn btn-primary" onclick="addFavorite(${id})">Add Car</button>
+                   <button id=${id} class="btn btn-primary" onclick="addFavorite(${id})">Add Car</button>
                  </div>
              </div>
                `;
@@ -58,18 +58,23 @@ outUser.addEventListener("click", () => {
 //Agrega los elementos seleccionados como favoritos al offcanvas.
 async function addFavorite(id) {
   const divOffcanvas = document.getElementById("off-canvas");
+  const buttonFav = document.getElementById(id)
   let data = await getData();
   let elementToSend = data.results.filter((item) => item.id === id);
   const { name, games_count, image_background } = elementToSend[0];
 
   divOffcanvas.innerHTML += `
-  <div class="card-favorite d-flex flex-row align-items-center justify-content-center">
-    <img class="img-favorite" src="${image_background}" alt="${name}">
+  <div class="card-favorite d-flex flex-row align-items-center justify-content-start">
+      <i class="fa-solid fa-star"></i>
+      <img class="img-favorite" src="${image_background}" alt="${name}">
       <div class="d-flex flex-column ">
           <p class="m-1"> Name: ${name} </p>
-          <p class="m-1"> Games-count: ${games_count} </p>
+          <p class="m-1"> Games-published: ${games_count} </p>
       </div>
   </div>
   `;
+  
+  //Deshabilita el botón una vez sea enviado al offcanvas
+  buttonFav.disabled = true
 }
 

@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.0",
+    "sweetalert2": "^11.4.0"
+  },
+  "name": "project-videogame-store",
+  "description": "Final Project Stage 1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielaAraujoZ/Project-VideoGame-Store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielaAraujoZ/Project-VideoGame-Store/issues"
+  },
+  "homepage": "https://github.com/DanielaAraujoZ/Project-VideoGame-Store#readme"
+}

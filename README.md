@@ -1,5 +1,4 @@
-# Project-VideoGame-Store
-Final Project Stage 1
+# Project-VideoGame-Page: Final Project Stage 1
 ## What is our website about?
 > Page where you can browse through the different video game consoles, showing their most representative game and a list of other popular games they have released. 
 > You can search and filter the different companies by name and add them to your favorites.

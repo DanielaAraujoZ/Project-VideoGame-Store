@@ -17,18 +17,25 @@ body {
   font-weight: 400;
   font-weight: 400;
 }
-.left {
+.left, .right {
   gap: 16px;
 }
-.left > p {
-  margin: 0;
+.offcanvas {
+  color: var(--white);
+  background-color: var(--red-bg);
+}
+.dropdown-menu{
+  background-color: var(--black-target);
+}
+.dropdown-item {
+  color: var(--white);
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 20px;
 }
 a {
   color: #fff;
   text-decoration: none;
-}
-.right {
-  gap: 16px;
 }
 input {
   width: 50%;
@@ -57,10 +64,6 @@ input {
 }
 .infoExternal > p {
   margin: 0px;
-}
-.offcanvas {
-  color: var(--white);
-  background-color: var(--red-bg);
 }
 .nav-link {
   color: #fff;

@@ -13,7 +13,7 @@ async function getData() {
   }
 }
 
-//Función que muestra los datos del API externa en el DOM.
+//Función que muestra los datos enviados por parametro o los datos directos de la API.
 async function showInfo(obj) {
   console.log(obj);
   let data = await getData();
@@ -25,7 +25,6 @@ async function showInfo(obj) {
   }
   info.map((item) => {
     const { name, image_background, games, id } = item;
-
     divTarget.innerHTML += `
              <div class="card" style="width: 18rem;">
                  <img src="${image_background}" class="card-img-top" alt="...">
@@ -54,7 +53,7 @@ async function addFavorite(id) {
       <img class="img-favorite" src="${image_background}" alt="${name}">
       <div class="d-flex flex-column ">
           <p class="m-1"> Name: ${name} </p>
-          <p class="m-1"> Games-published: ${games_count} </p>
+          <p class="m-1"> Purchased games: ${games_count} </p>
       </div>
   </div>
   `;
@@ -63,7 +62,22 @@ async function addFavorite(id) {
   buttonFav.disabled = true;
 }
 
-//Evento de captura para la busqueda
+//Agrega los items al dropdown
+let plataform = ['Xbox','Switch', 'IOS', 'Nintendo', 'Atari', 'Linux']
+const dropdown = document.getElementById('dropdown')
+plataform.forEach((item) => {
+  dropdown.innerHTML += `
+  <li class="dropdown-item" onclick=filterInfo("${item}")> ${item}</li>
+  `
+})
+//Filtra los elementos que son igual al item para enviarlos a la función que los mostrará en pantalla.
+async function filterInfo(nameToFilter) {
+  let data = await getData()
+  let infoToFilter = data.results.filter((item) => item.name.toLowerCase().includes(nameToFilter.toLowerCase()))
+   showInfo(infoToFilter)
+}
+
+//Evento de captura para la busqueda y envío de la información a la función que los mostrará en la pantalla.
 const searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", async () => {
   const inputSearch = document.getElementById("inputSearch").value;
@@ -81,32 +95,16 @@ const outUser = document.getElementById("outUser");
 let dataLocalS = JSON.parse(localStorage.getItem("AUTHDATA"));
 
 //Condicional que valida contenido en el localStorage. Cambia el estado del boton y habilita el boton de LogOut.
-// if (dataLocalS.email !== undefined) {
-//   buttonIcon.innerHTML = `
-//      <i class="fa-solid fa-user-check" style="color: black"></i>
-//      `;
-//   outUser.disabled = false;
-//   buttonIcon.disabled = true;
-// }
+ if (dataLocalS.email !== undefined) {
+   buttonIcon.innerHTML = `
+      <i class="fa-solid fa-user-check" style="color: black"></i>
+      `;
+   outUser.disabled = false;
+   buttonIcon.disabled = true;
+ }
 
 //Se reinicia el localStorage y se recarga la página en caso que se le de click al boton LogOut.
 outUser.addEventListener("click", () => {
   localStorage.clear();
   location.reload();
-});
-
-//Agrega los items al dropdown
-let plataform = ['Xbox','Switch', 'IOS', 'Nintendo', 'Atari', 'Xbox', 'Linux']
-const dropdown = document.getElementById('dropdown')
-plataform.forEach((item) => {
-  dropdown.innerHTML += `
-  <li class="dropdown-item" onclick=filterInfo("${item}")> ${item}</li>
-  `
 })
-
-//Filtra los elementos que son igual al item para mostrarlos en la pantalla
-async function filterInfo(nameToFilter) {
-  let data = await getData()
-  let infoToFilter = data.results.filter((item) => item.name.toLowerCase().includes(nameToFilter.toLowerCase()))
-   showInfo(infoToFilter)
-}

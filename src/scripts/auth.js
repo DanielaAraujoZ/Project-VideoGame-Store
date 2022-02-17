@@ -1,5 +1,5 @@
 //Captura de elementos necesarios de HTML y evento de envio del form.
-const urlData = "http://localhost:4002/infoUsers";
+const urlData = "https://videogames-project-final.herokuapp.com/infoUsers";
 const formS = document.getElementById("formSignUp");
 const buttonS = document.getElementById("signUpButton");
 
@@ -23,6 +23,15 @@ formS.addEventListener("submit", (e) => {
       "Content-type": "application/json; charset=UTF-8",
     },
   }).then((respond) => respond);
+
+  Swal.fire({
+    title: "Datos correctamente guardados. Pasa a la ventana de LOGIN",
+    width: 600,
+    padding: "3em",
+    color: "#FFF",
+    background: "#000000",
+  });
+  formS.reset();
 });
 
 //Cuando se cargue la página se enviará alerta notificando al usuario que ventana usar.
@@ -92,3 +101,6 @@ buttonL.addEventListener("click", async () => {
     });
   }
 });
+
+
+

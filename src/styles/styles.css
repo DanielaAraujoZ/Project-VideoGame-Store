@@ -117,3 +117,9 @@ ul {
   width: 72px;
   margin: 8px;
 }
+.card-title{
+  font-size: 24px;
+  text-align: start;
+  font-weight: 600;
+  color: var(--red-button);
+}

@@ -25,23 +25,8 @@
             data-bs-toggle="dropdown" aria-expanded="false">
             Plataform
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">PC</a></li>
-            <li><a class="dropdown-item" href="#">PS</a></li>
-            <li><a class="dropdown-item" href="#">Xbox</a></li>
-            <li><a class="dropdown-item" href="#">Switch</a></li>
-            <li><a class="dropdown-item" href="#">IOS</a></li>
-            <li><a class="dropdown-item" href="#">Android</a></li>
-            <li><a class="dropdown-item" href="#">Nintendo</a></li>
-            <li><a class="dropdown-item" href="#">macOS</a></li>
-            <li><a class="dropdown-item" href="#">Linux</a></li>
-            <li><a class="dropdown-item" href="#">Classic Macintosh</a></li>
-            <li><a class="dropdown-item" href="#">Apple II</a></li>
-            <li><a class="dropdown-item" href="#">Commodore/Amiga</a></li>
-            <li><a class="dropdown-item" href="#">Atari</a></li>
-            <li><a class="dropdown-item" href="#">Sega</a></li>
-            <li><a class="dropdown-item" href="#">3DO</a></li>
-            <li><a class="dropdown-item" href="#">Neo Geo</a></li>
+          <ul id="dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!-- Items list to filter info -->
           </ul>
         </li>
       </ul>
@@ -52,7 +37,7 @@
     <div class="right d-flex flex-row justify-content-end align-items-center">
       <div class="d-flex align-items-center"></div>
       <div class="d-flex">
-        <input type="text" placeholder="Search here" id="inputSearch"/>
+        <input type="text" placeholder="Search here" id="inputSearch" />
         <button id="searchButton">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -88,7 +73,7 @@
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div id="off-canvas" class="offcanvas-body d-flex flex-column justify-content-start">
-      <!-- Cards marked as favorites -->  
+      <!-- Cards marked as favorites -->
     </div>
   </div>
 

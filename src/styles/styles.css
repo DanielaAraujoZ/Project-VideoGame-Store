@@ -81,12 +81,19 @@ ul {
   color: #ffff;
   margin: 13px 0 20px 0;
 }
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;  
+}
 .card-img-top {
-  height: 36%;
+  padding: 10px;  
+  border-radius: 5px;
 }
 .card .btn {
   background-color: var(--red-button);
   border: 3px solid var(--red-bg);
+  width: 100%;
 }
 .mainTitle {
   font-size: 48px;

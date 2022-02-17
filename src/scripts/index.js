@@ -26,7 +26,7 @@ async function showInfo(data) {
                  <div class="card-body">
                    <h5 class="card-title">${name}</h5>
                    <p class="card-text">${games.map((item) => item.name)}</p>
-                   <button id=${id} class="btn btn-primary" onclick="addFavorite(${id})">Add Car</button>
+                   <button id=${id} class="btn btn-primary" onclick="addFavorite(${id})">Add Favorites</button>
                  </div>
              </div>
                `;
@@ -76,7 +76,7 @@ searchButton.addEventListener("click", async () => {
       <div class="card-body">
           <h5 class="card-title">${data.name}</h5>
           <p class="card-text">${data.games.map((item) => item.name)}</p>
-          <button id=${data.id} class="btn btn-primary" onclick="addFavorite(${data.id})">Add Car</button>
+          <button id=${data.id} class="btn btn-primary" onclick="addFavorite(${data.id})">Add Favorites</button>
       </div>
     </div>`;
   });

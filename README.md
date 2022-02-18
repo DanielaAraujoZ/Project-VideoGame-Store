@@ -1,4 +1,5 @@
 # Project-VideoGame-Page: Final Project Stage 1
++ **URL Netlify:** (https://yfvg-project-final.netlify.app/)
 ## What is our website about?
 > Page where you can browse through the different video game consoles, showing their most representative game and a list of other popular games they have released. 
 > You can search and filter the different companies by name and add them to your favorites.
@@ -16,5 +17,5 @@
 + Use of LocalStorage, storage and manipulation of data.
 + Layout using HTML and CSS, interactivity with Javascript.
 #### Authors:
-> Daniela Araujo (https://github.com/DanielaAraujoZ)
-> Kevin Torres (https://github.com/Kinyein)
++ Daniela Araujo (https://github.com/DanielaAraujoZ)
++ Kevin Torres (https://github.com/Kinyein)

@@ -73,7 +73,7 @@ buttonL.addEventListener("click", async () => {
   if (dataA.length > 0) {
     Swal.fire({
       title:
-        "Validación correcta. Serás redireccionado a la página principal en unos segundos...",
+      "Validación correcta. Serás redireccionado a la página principal en unos segundos...",
       width: 600,
       padding: "3em",
       color: "#FFF",
@@ -93,7 +93,7 @@ buttonL.addEventListener("click", async () => {
   } else {
     Swal.fire({
       title:
-        "Validación incorrecta. Verifica tus datos o registrate en la ventana de SIGNUP",
+      "Validación incorrecta. Verifica tus datos o registrate en la ventana de SIGNUP",
       width: 600,
       padding: "3em",
       color: "#FFF",
